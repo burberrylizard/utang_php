@@ -1,0 +1,18 @@
+CREATE DATABASE utang_db;
+
+USE utang;
+
+        CREATE TABLE IF NOT EXISTS utang (
+                id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                name VARCHAR(50) NOT NULL,
+                utang DECIMAL(9,2) NOT NULL,
+                total_paid DECIMAL(9,2) NOT NULL,
+                whose BOOLEAN NOT NULL,
+                stat BOOLEAN NOT NULL
+                );
+
+        CREATE TABLE IF NOT EXISTS users (
+                id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                username VARCHAR(100) NOT NULL,
+                password LONGTEXT(200) NOT NULL
+                );
